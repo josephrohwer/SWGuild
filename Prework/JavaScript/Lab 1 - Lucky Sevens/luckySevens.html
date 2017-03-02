@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Lucky Sevens</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+    th {
+    text-align: center;
+    font-size: 30px;
+    }
+
+    #TD {
+        text-align: right;
+    }
+
+    #play {
+        text-align: center;
+    }
+
+    #resultsTable th {
+        text-decoration: underline;
+    }
+
+    #TR {
+        background-color: lightgrey;
+    }
+        
+    body {
+        background-image: url("http://wallpaperus.org/wallpapers/05/209/luck-luck-1920x1080-wallpaper-960058.jpg")
+    }
+    table {
+        background-color: white;
+        border: 10px solid gold;
+    }
+    </style>
+</head>
+<body onload=hideResults()>
+    <div clas="conatiner">
+        
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+            <br><br><noscript>Enable JavaScript</noscript>
+            
+            <table class="table table-responsive" id="playTable" border="0" align="center">
+                <thead>
+                    <tr><th colspan="2">Lucky Sevens</th></tr>                
+                </thead>
+                <tbody>
+                    <tr><td id="TD" width="50%">Starting Bet ($): </td><td width="50%"><input type="number" id="Input" min="1" max="100"></td></tr>
+                </tbody>
+                <tfoot>
+                <tr><td id="play" colspan="2"><button id="button" onclick="play();">Play</button></td></tr>
+                </tfoot>    
+            </table>
+            
+            </div>
+        </div>
+                                                 
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+            <br>
+            <table class="table table-responsive" id="resultsTable" border="0" align="center">
+                <thead>
+                    <tr><th colspan="2">Results</th></tr>                
+                </thead>
+                <tbody>
+                    <tr id="TR"><td width="66%">Starting Bet</td><td id="startingValue">$</td></tr>
+                    <tr><td>Total Rolls Before Going Broke</td><td id="totalRolls"></td></tr>
+                    <tr><td>Highest Amount Won</td><td id="maxValue">$</td></tr>
+                    <tr><td>Roll Count at Highest Amount Won</td><td id="rollCount"></td></tr>
+                </tbody>   
+            </table>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script type="text/javascript">
+        
+        function hideResults() {
+			document.getElementById("resultsTable").style.display= "none";
+		}
+     
+        function diceRoll() {
+            var die1 = Math.floor((Math.random() * 6) + 1);
+            var die2 = Math.floor((Math.random() * 6) + 1);
+            var rollNumber = die1 + die2;
+            return rollNumber; 
+        }
+        
+        function play() {
+            var startingValue = parseInt(document.getElementById("Input").value);
+            var currentValue = startingValue;
+            var totalRolls = 0;
+            var maxValue = currentValue;
+            var rollCount = totalRolls;
+            
+            while(currentValue > 0) {
+                var currentRoll = diceRoll();
+                totalRolls = totalRolls + 1;        
+            
+            if (currentRoll == 7) {
+                currentValue = currentValue + 4;
+            } 
+            else {
+                currentValue = currentValue - 1;
+            }
+            
+            if (currentValue > maxValue) {
+                maxValue = currentValue;
+                rollCount = totalRolls;
+            }
+            document.getElementById("startingValue").innerHTML = "$" + startingValue;
+            document.getElementById("totalRolls").innerHTML = totalRolls;
+            document.getElementById("maxValue").innerHTML = "$" + maxValue;
+            document.getElementById("rollCount").innerHTML = rollCount;
+            document.getElementById("button").innerHTML = "Play Again";
+            document.getElementById("resultsTable").style.display = "table";
+            }
+        }
+    </script>          
+</body>
+</html>

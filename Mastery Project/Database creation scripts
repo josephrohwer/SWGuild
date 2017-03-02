@@ -1,0 +1,62 @@
+CREATE TABLE `users` (
+ `username` varchar(20) NOT NULL,
+ `password` char(60) NOT NULL,
+ `enabled` tinyint(1) NOT NULL,
+ PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+INSERT INTO `users` (`username`, `password`, `enabled`) VALUES
+('admin', '$2a$10$fWnjAhiyZTL0o/IbURtU6.AEuyS/aDc2jKUHkxJMRiw.bSwzD8WHW', 1),
+('marketer', '$2a$10$CfAI1lpkucnJirJ9znvCsex/5BjMO0aPXMaWgtPVQ4kfzSj38n4E6', 1),
+('user', '$2a$10$vjlUxkBnjha1Hzi2.Vez7uYmyInIpAluCxQNyOporT1gBC9eOvo/6', 1);
+
+CREATE TABLE `authorities` (
+ `username` varchar(20) NOT NULL,
+ `authority` varchar(20) NOT NULL,
+ CONSTRAINT `authorities_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+INSERT INTO `authorities` (`username`, `authority`) VALUES
+('admin', 'ROLE_ADMIN'),
+('marketer', 'ROLE_MARKETER'),
+('user', 'ROLE_USER');
+
+CREATE TABLE `posts` (
+ `post_id` int(11) NOT NULL AUTO_INCREMENT,
+ `title` varchar(50) NOT NULL,
+ `postBody` text,
+ `postDate` date,
+ `expDate` date,
+ `status` tinyint(1) NOT NULL,
+ PRIMARY KEY (`post_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `contact` (
+ `contact_id` int(11) NOT NULL AUTO_INCREMENT,
+ `phone` char(18) NOT NULL,
+ `email` varchar(100) NOT NULL,
+ `twitter` varchar(100) NOT NULL,
+ `facebook` varchar(100) NOT NULL,
+  PRIMARY KEY (`contact_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+CREATE TABLE `statics` (
+ `static_id` int(11) NOT NULL AUTO_INCREMENT,
+ `title` varchar(100),
+ `staticBody` text,
+  PRIMARY KEY (`static_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `tags` (
+ `tag_id` int(11) NOT NULL AUTO_INCREMENT,
+ `tag` varchar(100) NOT NULL,
+ PRIMARY KEY (`tag_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `posts_tags` (
+ `tag_id` int(11) NOT NULL,
+ `post_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

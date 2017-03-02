@@ -1,0 +1,48 @@
+body {
+	background: grey;
+}
+a {
+	text-decoration: none;
+	color: red;
+}
+a:hover {
+	text-decoration: underline;
+	background-color: #80ccff;
+}
+#table2 {
+	background-color: #80ccff;
+	font-style: italic;
+	text-align: center;
+	width: 80%;
+	cellspacing: 0;
+}
+.container-fluid caption {
+	font-style: normal;
+	text-align: center;
+	font-size: 20px;
+	color: black;
+}
+.container-fluid th {
+	color: white;
+	background-color: black;
+	text-align: center;
+	font-style: normal;
+}
+li {
+	font-style: italic;
+}
+@font-face {
+	font-family: yearzero;
+	src: url("../fonts/resea.ttf");
+}
+#font {
+	font-family: yearzero;
+}
+img {
+	height: 400px;
+	width: 400px;
+}
+#producer {
+	color: red;
+	font-weight: bold;
+}

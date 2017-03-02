@@ -1,0 +1,4 @@
+RockStar Energy::229::10
+MTN Dew Code Red::149::10
+Chips Ahoy Cookies::319::10
+Munchies Snack Mix::124::10
