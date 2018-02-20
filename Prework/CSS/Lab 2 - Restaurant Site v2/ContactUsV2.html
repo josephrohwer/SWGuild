@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+	<title>HuHot Mongolian Grill</title>
+	
+	<link href="restaurantStylesV2.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="header">
+		<h1 align="center">HuHot Mongolian Grill</h1>
+	
+		<hr size="1" width="100%">
+	
+		<p>
+			<a href="HomeV2.html" style="padding-left:2em">Home</a>
+			<a href="MenuV2.html" style="padding-left:2em">Menu</a>
+			<a href="ContactUsV2.html" style="padding-left:2em">Contact Us</a>
+		</p>
+	
+		<hr size="1" width="100%">
+	</div>
+	
+	<div class="body">	
+	<br><br>
+	
+	<form action="fakePage.html" method="POST">
+		<table border="0" width="500" cellpadding="4">
+			<tr>
+				<td align="right">Name:</td>
+				<td><input type="text" style="width:200px" name="information"><br></td>
+			</tr>
+			<tr>
+				<td align="right">Email:</td>
+				<td><input type="text" style="width:200px" name="information"><br></td>
+			</tr>
+			<tr>
+				<td align="right">Phone:</td>
+				<td><input type="text" style="width:200px" name="information"><br></td>
+			</tr>
+			<tr>
+				<td align="right">Reason for Inquiry:</td>
+				<td>
+					<select style="width:205px" name="reason">
+						<option value="catering">Catering</option>
+						<option value="privateParty">Private Party</option>
+						<option value="feedback">Feedback</option>
+						<option value="other">Other</option>
+					</select><br>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" style="vertical-align:top">Additional Information:</td>
+				<td>
+					<textarea style="resize:none; width:200px" rows="6" name="briefDescription"></textarea><br>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">Have you been to the restaurant?</td>
+				<td>
+					<input type="radio" name="answer" value="NO" checked>No
+					<input type="radio" name="answer" value="YES">Yes<br>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">Best days to contact you:</td>
+				<td>
+					<input type="checkbox" name="weekday" value="M">M
+					<input type="checkbox" name="weekday" value="T">T
+					<input type="checkbox" name="weekday" value="W">W
+					<input type="checkbox" name="weekday" value="TH">Th
+					<input type="checkbox" name="weekday" value="F">F
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td align="right"><input type="submit" value="Send Request"></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+	
+	<div class="footer">
+		<p><hr size="1" width="100%"></p>
+	
+		<p align="center">223 East Main Street, Missoula, Montana, 59802</p>
+	
+		<p align="center">(406) 327-1232</p>
+	</div>
+</body>
+
+</html>

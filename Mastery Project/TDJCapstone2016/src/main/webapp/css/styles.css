@@ -1,0 +1,185 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 16, 2016, 11:01:55 AM
+    Author     : josephrohwer
+*/
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html, body {
+    height: 100%;
+    background: url(../img/wallpaper.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.well {
+    background-color: rgba(245, 245, 245, 0.4);
+}
+
+.panel {
+    background-color: rgba(245, 245, 245, 0.4);
+}
+
+h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 60px;
+}
+
+li {
+    font-family: 'Comfortaa', cursive;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+table {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#addEditForm {
+    text-align: left;
+}
+
+#contact-button, #user-button, #page-button, #add-user-button, #update-password-button {
+    float: right;
+    margin-top: 25px;
+    margin-left: 20px
+}
+
+#splash-pic {
+    text-align: center;
+    width: 100%;
+    height: 125px;
+}
+
+#check-box-div {
+    float: right;
+}
+
+#contactTable td {
+    border-top: none; 
+}
+
+#edit-exp-date {
+    float: right;
+}
+
+#footerTable td { 
+    border-top: none; 
+}
+
+#icon {
+    font-size: 35px;
+}
+
+#new-post-button {
+    float: right;
+    margin-top: 20px;
+}
+
+* {
+    margin: 0;
+}
+
+.footer, .push {
+    height: 40px;
+}
+
+.post-title{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.glyphicon-ok {
+    color: green;
+    transition: all .2s ease-in-out;
+}
+
+.glyphicon-ok:hover {
+    color: darkgreen;
+    transform: scale(1.5);
+
+}
+
+.glyphicon-pencil {
+    color: blue;
+    transition: all .2s ease-in-out;
+}
+
+.glyphicon-pencil:hover {
+    color: navy;
+    transform: scale(1.5);
+}
+
+.glyphicon-trash {
+    color: red;
+    transition: all .2s ease-in-out;
+}
+
+.glyphicon-trash:hover {
+    color: darkred;
+    transform: scale(1.5);
+}
+
+.modal-title {
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.navbar-header{
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+
+}
+
+.previewDiv {
+    border: 1px solid rgba(113, 129, 149, 0.2);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    height:300px; 
+    min-height:300px; 
+    overflow:hidden;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.previewDiv:hover {
+    background-color: rgba(113, 129, 149, 0.2);
+}
+
+.control-label {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.fa {
+    font-size: 35px;
+    transition: all .2s ease-in-out;
+}
+
+.fa:hover {
+    transform: scale(1.5);
+}
+
+.tag.label.label-info{
+    font-size: 12px;
+    padding: 8px;
+}
+
+.validationErrors {
+    font-weight: bold;
+    color: red;
+}

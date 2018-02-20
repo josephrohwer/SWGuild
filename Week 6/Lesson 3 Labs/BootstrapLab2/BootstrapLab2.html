@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+
+<head>
+	<title>SCG</title>
+    <meta charset="utf-8"
+    <meta name="viewport" content="width=evice-width, initial scale=1">
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/Styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+
+	<h2><center>Software Craftsmanship Guild</center></h2>
+<div class="row">
+	<div class="col-md-6">
+	<div class="body"><br><br>
+			<table class="table table-responsive" border="0" width="500" cellpadding="4">
+				<th colspan = "2">Existing Users Log in Here</th>
+				<tr>
+					<td align="right"><b>Email:&nbsp;&nbsp;</b></td>
+					<td><input type="text" id="name" style="width:200px" name="information"><br></td>
+				</tr>
+				<tr>
+					<td align="right"><b>Password:&nbsp;&nbsp;</b></td>
+					<td><input type="text" id="password" style="width:200px" name="information"><br></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="checkbox" name="remember" value="rememberMe"?> Remember me?</td>
+				</tr>
+				<tr>
+					<td></td>
+          <td><button id="submitButton"  onclick="submit();">Login</button></td>
+				</tr>
+			</table>
+	</div>
+	</div>
+	<div class="col-md-6">
+	<div class="body"><br><br>
+			<table class="table table-responsive" border="0" width="500" cellpadding="4">
+				<th colspan="2">New User? Register Now!</b>
+				<tr>
+					<td align="right"><b>Email:&nbsp;&nbsp;</b></td>
+					<td><input type="text" id="name" style="width:200px" name="information"><br></td>
+				</tr>
+				<tr>
+					<td align="right"><b>First Name:&nbsp;&nbsp;</b></td>
+					<td><input type="text" id="email" style="width:200px" name="information"><br></td>
+				</tr>
+				<tr>
+					<td align="right"><b>Last Name:&nbsp;&nbsp;</b></td>
+					<td><input type="text" id="phone" style="width:200px" name="information"><br></td>
+				</tr>
+				<tr>
+					<td align="right"><b>Password:&nbsp;&nbsp;</b></td>
+					<td><input type="text" id="phone" style="width:200px" name="information"><br></td>
+				</tr>
+				<tr>
+					<td align="right"><b>Confirm password:&nbsp;&nbsp;</b></td>
+					<td><input type="text" id="phone" style="width:200px" name="information"><br></td>
+				</tr>
+				<tr>
+					<td></td>
+                    <td><button id="submitButton"  onclick="submit();">Register</button></td>
+				</tr>
+			</table>
+	</div>
+	</div>
+</div>
+
+
+
+	<div class="row">
+	<div class="col-md-12">
+
+	<div class="footer">
+		<p><hr size="1" width="100%"></p>
+		<p>2014 Software Craftsmanship Guild</p>
+	</div>
+
+	</div>
+	</div>
+</div>
+
+    <script type="text/javascript">
+
+    function submit() {
+
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var reason = document.getElementById("reason")
+        var info = document.getElementById("info").value;
+        var checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
+        if (name.length == 0) {
+            alert("Enter name");
+        }
+
+        if ((email.length || phone.length) == 0) {
+            alert("Enter email or phone");
+        }
+
+        if (reason.value == "other" && info.length == 0) {
+            alert("Enter additional information");
+        }
+
+        if (checked < 1) {
+            alert("Select at least one day to contact you");
+        }
+    }
+
+</script>
+</body>
+</html>
