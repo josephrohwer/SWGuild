@@ -1,4 +1,0 @@
-0047::Bruce::Campbell::Java Minneapolis 09/16
-0048::Tonya::Harding::.Net Minneapolis 09/16
-0049::Nancy::Kerrigan::Java Minneapolis 09/16
-0050::Bill::LeChat::.Net Minneapolis 09/16
